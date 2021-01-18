@@ -1,8 +1,7 @@
 function solve(n) {
-    while (n >= 1) {
-        console.log(n);
-        n--;
-    }
-
+  while (n >= 1) {
+    console.log(n);
+    n--;
+  }
 }
-solve(15)
+solve(15);
