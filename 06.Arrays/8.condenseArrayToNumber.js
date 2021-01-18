@@ -5,7 +5,7 @@ function solve(arr) {
 
         for(let i = 0 ; i < arr.length - 1; i++) {
             let num1 = arr[i];
-            let num2 = arr[i+1];
+            let num2 = arr[i++];
             let sum = num1+ num2;
             newArr.push(sum);
         }
