@@ -7,6 +7,7 @@ function solve(arr1,arr2) {
         if(arr1[i] !== arr2[i]) {
             isIdentical = false
             console.log(`Arrays are not identical. Found difference at ${i} index`);
+            break;
 
         }
     }
