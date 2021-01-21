@@ -1,25 +1,20 @@
 function solve(arr1,arr2) {
+     
     let isIdentical = true;
-
-    for(let i = 0; i < arr1.length ; i++) {
-
+    let sum = 0;
+    for (let i = 0; i<arr1.length; i++) {
+        sum+= Number(arr1[i]);
         if(arr1[i] !== arr2[i]) {
+            isIdentical = false
             console.log(`Arrays are not identical. Found difference at ${i} index`);
-            isIdentical = false;
-            break
 
         }
-        }
-        let sum = 0;
-        if(isIdentical) {
-            for(let unparsed of arr1) {
-                sum += Number(unparsed);
-
-            }
-            console.log(`Arrays are identical. Sum: ${sum}`)
-        }
-
     }
+    if(isIdentical) {
+        console.log(`Arrays are identical. Sum: ${sum}`);
+    }
+    
+   
 
-
-solve(['1'], ['10'])
+}
+solve(['1','2'], ['1','2'])
