@@ -3,10 +3,10 @@ function solve(arr) {
   let sumOdd = 0;
   for (const number of arr) {
     if (number % 2 === 0) {
-      sumEven += Number(number);
+      sumEven += number;
     }
     else {
-        sumOdd += Number(number);
+        sumOdd += number;
     }
     
   }
