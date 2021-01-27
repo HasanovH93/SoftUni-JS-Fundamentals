@@ -1,7 +1,7 @@
 function solve(arr) {
    
-    let reversed = arr.reverse().join(" ");
-    console.log(reversed);
+    let reversed = arr.reverse();
+    console.log(reversed.join(" "));
 }
 
 solve(['a','b','c','d','e'])
