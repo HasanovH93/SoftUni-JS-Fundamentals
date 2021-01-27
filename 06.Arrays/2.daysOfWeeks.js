@@ -5,8 +5,8 @@ function solve(num) {
         "Tuesday",
         "Wednesday",
         "Thursday",
-        "Fiday",
-        "Satuday",
+        "Friday",
+        "Saturday",
         "Sunday"
     ];
 
@@ -16,6 +16,7 @@ function solve(num) {
         console.log("Invalid day!")
     }
 
+    
 
 }
 solve(7)
