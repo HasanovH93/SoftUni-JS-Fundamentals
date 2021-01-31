@@ -1,21 +1,6 @@
 function arrSorting(input) {
 
-    let sortedArr = input.sort((a,b)=>{
-        return a-b;
-        
 
-    });
-    let result = [];
-    while(sortedArr.length !== 0){
-
-        let bigNumber = sortedArr.pop();
-        let smallNumber = sortedArr.shift();
-
-        result.push(bigNumber)
-        result.push(smallNumber)
-
-    }
-    console.log(result.join(" "))
 
     
 
