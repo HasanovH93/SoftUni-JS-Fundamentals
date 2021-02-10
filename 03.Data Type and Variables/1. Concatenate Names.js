@@ -1,8 +1,5 @@
-function solve(fist,second,del){
-
-    console.log(`${fist}${del}${second}`)
+function solve(fist, second, del) {
+  console.log(`${fist}${del}${second}`);
 }
 
-solve("Hasan","Hasanov","-->")
-
-
+solve("Hasan", "Hasanov", "-->");
