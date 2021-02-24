@@ -1,6 +1,6 @@
 function productsList(arr) {
 
-    let sortedArr = arr.sort((a,b)=>a.localeCompare(b));
+    let sortedArr = arr.sort();
     let sortedL = sortedArr.length;
    
     for(let i = 0; i<sortedL;i++){
