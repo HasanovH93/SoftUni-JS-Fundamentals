@@ -18,7 +18,7 @@ function mySlice(arr, start, end) {
         end += arr.length;
     }
 
-    for(let i = start; i < end && i < arr.length; i++){
+    for(let i = start; (i < end && i < arr.length); i++){
         result.push(arr[i]);
     }
     return result;
