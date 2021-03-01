@@ -3,4 +3,4 @@ function solve(arr) {
     console.log(sum)
   }
   
-  solve([20,30,50])
+  solve([20,30,40])
