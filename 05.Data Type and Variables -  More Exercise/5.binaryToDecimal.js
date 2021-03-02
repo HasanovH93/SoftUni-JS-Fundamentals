@@ -1,7 +1,5 @@
 function solve(x) {
-    
-    let decimal = parseInt(x, 2);
-    console.log(decimal);
-   
+  let decimal = parseInt(x, 2);
+  console.log(decimal);
 }
-solve("00001001")
+solve("00001001");
