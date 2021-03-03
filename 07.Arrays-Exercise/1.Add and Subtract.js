@@ -1,31 +1,30 @@
 function solve(input) {
   let arrOfNumbers = input;
-  let modifyNumbersArr = [];
-  let fistArrSum = 0;
-  let secondArrSum = 0;
+  let newArr = [];
+  let firstArraySum = 0;
+  let secondArraySum = 0;
+
   let arrLength = arrOfNumbers.length;
-  
+
   for (let i = 0; i < arrLength; i++) {
-    let currentNumber = arrOfNumbers[i];
-    
+    let currNumber = arrOfNumbers[i];
+    firstArraySum += currNumber;
 
-    fistArrSum += currentNumber;
-    let newNumber = 0;
+    if (currNumber % 2 === 0) {
+      currNumber += i;
 
-    if (currentNumber % 2 === 0) {
-      newNumber = currentNumber + i;
-     
+      newArr.push(currNumber);
     } else {
-      newNumber = currentNumber - i;
-      
+      currNumber -= i;
+      newArr.push(currNumber);
     }
-    modifyNumbersArr.push(newNumber);
-    secondArrSum += newNumber;
   }
-
-  console.log(modifyNumbersArr);
-  console.log(fistArrSum)
-  console.log(secondArrSum)
+  for (let i = 0; i < newArr.length; i++) {
+    secondArraySum += newArr[i];
+  }
+  console.log(newArr);
+  console.log(firstArraySum);
+  console.log(secondArraySum);
 }
 
 solve([5, 15, 23, 56, 35]);
