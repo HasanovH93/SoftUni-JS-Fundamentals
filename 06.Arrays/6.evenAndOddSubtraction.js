@@ -4,14 +4,12 @@ function solve(arr) {
   for (const number of arr) {
     if (number % 2 === 0) {
       sumEven += number;
+    } else {
+      sumOdd += number;
     }
-    else {
-        sumOdd += number;
-    }
-    
   }
-  
+
   console.log(sumEven - sumOdd);
 }
 
-solve([1,2,3,4,5,6]);
+solve([1, 2, 3, 4, 5, 6]);
