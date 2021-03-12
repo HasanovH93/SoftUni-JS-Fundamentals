@@ -18,10 +18,11 @@ function solve(input) {
       currNumber -= i;
       newArr.push(currNumber);
     }
-  }
-  for (let i = 0; i < newArr.length; i++) {
     secondArraySum += newArr[i];
   }
+  
+    
+  
   console.log(newArr);
   console.log(firstArraySum);
   console.log(secondArraySum);
