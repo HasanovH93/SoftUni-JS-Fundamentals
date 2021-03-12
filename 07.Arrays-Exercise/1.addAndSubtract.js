@@ -20,9 +20,7 @@ function solve(input) {
     }
     secondArraySum += newArr[i];
   }
-  
-    
-  
+
   console.log(newArr);
   console.log(firstArraySum);
   console.log(secondArraySum);

@@ -1,17 +1,10 @@
 function solve(firstArr, secondArr) {
-  let thirdArr = []
+  let thirdArr = firstArr.map((firstEl, i) => 
+   i % 2 == 0 ? Number(firstEl) + Number(secondArr[i]) :  firstEl + secondArr[i]
+  );
   
-  for(let i = 0; i < firstArr.length; i++) {
-    if(i % 2 === 0){
-      let sum = Number(firstArr[i]) + Number(secondArr[i]);
-      thirdArr.push(sum);
-    }else {
-     let buff = firstArr[i] + secondArr[i]
-     thirdArr.push(buff);
-    }
-   
-  }
-  console.log(thirdArr.join(" - "))
+ 
+  console.log(thirdArr.join(" - "));
 }
 
 
