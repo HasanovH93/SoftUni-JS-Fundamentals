@@ -1,9 +1,9 @@
 function solve(arr,rotationsCount) {
 
     for(let i = 0; i< rotationsCount; i++) {
-        let firstElement = arr[0];
-        arr.shift(firstElement);
-        arr.push(firstElement);
+      
+       let currNum = arr.shift();
+        arr.push(currNum);
     }
     console.log(arr.join(" "))
 }
