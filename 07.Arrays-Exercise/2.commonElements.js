@@ -1,5 +1,4 @@
 function solve(firstArr, secondArr) {
-    
   for (let firstArrElement of firstArr) {
     for (let secArrElement of secondArr) {
       if (firstArrElement === secArrElement) {
