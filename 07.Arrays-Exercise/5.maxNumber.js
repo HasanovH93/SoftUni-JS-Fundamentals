@@ -10,11 +10,10 @@ function maxNumber(arr) {
         isTopInteger = false;
         break;
       }
-      
     }
     if (isTopInteger) {
-        newArr.push(currElement);
-      }
+      newArr.push(currElement);
+    }
   }
   console.log(newArr.join(" "));
 }
