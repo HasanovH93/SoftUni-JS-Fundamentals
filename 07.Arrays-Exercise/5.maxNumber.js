@@ -1,19 +1,21 @@
-function maxNumber(arr){
+function maxNumber(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let currElement = arr[i];
+    let isTopInteger = true;
+    for (let j = i + 1; j < arr.length; j++) {
+      let nextElement = arr[j];
 
-    let newArr = [];
-    for(let i = 0; i < arr.length -1; i++){
-        
-        let firstNum = arr[i++];
-        let secNum = arr[i]
-       
-        if(firstNum > secNum){
-          newArr.push(firstNum)
-          
-        }else {
-            newArr.push(secNum)
-            
-        }
+      if (currElement <= nextElement) {
+        isTopInteger = false;
+        break;
+      }
+      
     }
-    console.log(newArr.join(" "))
+    if (isTopInteger) {
+        newArr.push(currElement);
+      }
+  }
+  console.log(newArr.join(" "));
 }
-maxNumber([1, 4, 3, 2])
+maxNumber([14, 24, 3, 19, 15, 17]);
