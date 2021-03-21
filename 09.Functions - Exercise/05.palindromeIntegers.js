@@ -1,26 +1,22 @@
 function palindromeInt (input) {
     
-    let arrOfNumbers = input;
-    let inputL = arrOfNumbers.length;
-
-    const isPalindrome = (num)=> {
+    let arrOfNumber = input;
+    let inputL = arrOfNumber.length;
+    const isPalindrome = (num) => {    
+    
         let startNum = num;
-        let reversedNum = Number(num.toString().split("").reverse().join(""))
-       if(startNum === reversedNum){
-
-       return 'true'
-       }else{
-           return 'false'
-       }
-
+        let reverseNum = Number(num.toString().split("").reverse().join(""));
+        
+        if(startNum === reverseNum){
+            return true;
+        }else {
+            return false;
+        }
     }
-
-    for(let i = 0; i < inputL;i++){
-
-        let currentNumber = arrOfNumbers[i];
-
-        console.log(isPalindrome(currentNumber))
-
+    for(let i = 0; i < inputL; i++) {
+        let currNumber = arrOfNumber[i];
+        console.log(isPalindrome(currNumber));
+       
 
     }
 

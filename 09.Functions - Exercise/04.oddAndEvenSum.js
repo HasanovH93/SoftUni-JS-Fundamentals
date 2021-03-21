@@ -1,30 +1,25 @@
 function printResult(input) {
 
-     let inputAsString = input.toString();
-     let inputL = inputAsString.length;
-
-     let takeOddSum = function(numAsString) {
-         let oddSum = 0;
-         for (let index = 0; index < inputL; index++) {
-              let currentDigit = Number(numAsString[index]);
-              if (currentDigit % 2 !== 0) {
-                   oddSum += currentDigit;
-              }
-         }
-    return oddSum;
-  };
-  let takeEvenSum = (numAsString) => {
+    let inputAsString = input.toString();
+    
     let evenSum = 0;
-    for (let index = 0; index < inputL; index++) {
-      let currentDigit = Number(numAsString[index]);
-      if (currentDigit % 2 === 0) {
-        evenSum += currentDigit;
-      }
-    }
-    return evenSum;
-  };
+    let oddSum = 0;
+   
+    let inputL = inputAsString.length
+    for(let i = 0; i < inputL; i++) {
+     let currElement = Number(inputAsString[i]);
 
-  console.log(`Odd sum = ${takeOddSum(inputAsString)}, Even sum = ${takeEvenSum(inputAsString)}`);
+     if(currElement % 2 === 0) {
+       evenSum += currElement
+     }else {
+       oddSum += currElement
+     }
+    }
+
+    console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
+    
+
+  
 }
 
 printResult(1000435);
