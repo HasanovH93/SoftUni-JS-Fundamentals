@@ -1,22 +1,16 @@
 function matrix(input) {
-  let number = input;
-  
-
   const rowGenerator = (num) => {
     let output = "";
+
     for (let i = 1; i <= num; i++) {
-      output += `${number} `;
-      
+      output += `${num} `;
     }
     return output;
   };
-  for (let i = 1; i <= number; i++) {
-    console.log(rowGenerator(number));
 
+  for (let i = 1; i <= input; i++) {
+    console.log(rowGenerator(input));
+    console.log("----");
   }
-
-
- 
 }
-
 matrix(5);
