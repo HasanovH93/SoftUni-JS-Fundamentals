@@ -10,7 +10,6 @@ function matrix(input) {
 
   for (let i = 1; i <= input; i++) {
     console.log(rowGenerator(input));
-    console.log("----");
   }
 }
 matrix(5);

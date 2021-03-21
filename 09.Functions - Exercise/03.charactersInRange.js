@@ -1,5 +1,4 @@
 function charRange(fChar, sChar) {
-  
   let firstSymbolAsNumber = fChar.charCodeAt(0);
   let secondSumbolAsNumber = sChar.charCodeAt(0);
   let smallerNumber = Math.min(firstSymbolAsNumber, secondSumbolAsNumber);
