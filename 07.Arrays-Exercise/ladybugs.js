@@ -28,18 +28,13 @@ function ladyBugs(input) {
       ) {
         currentIndex += offset;
       }
-   
+
       field[startingIndex] = 0;
-      if(currentIndex >= 0 && currentIndex < n) {
+      if (currentIndex >= 0 && currentIndex < n) {
         field[currentIndex] = 1;
       }
-      
     }
   }
   console.log(field.join(" "));
 }
-ladyBugs([ 3, '0 1 2',
-'0 right 1',
-'1 right 1',
-'2 right 1']
-);
+ladyBugs([3, "0 1 2", "0 right 1", "1 right 1", "2 right 1"]);
