@@ -22,25 +22,25 @@ function dungeonestDark(arr) {
     } else if (room[0] === "chest") {
       let foundCoins = Number(room[1]);
       console.log(`You found ${foundCoins} coins.`);
-      coins+= foundCoins
+      coins += foundCoins;
     } else {
-        let currentMonster = room[0];
-        let attackMonster = Number(room[1]);
-        health -= attackMonster;
-        if(health > 0){
-            console.log(`You slayed ${currentMonster}.`);
-        }else {
-            console.log(`You died! Killed by ${currentMonster}.`);
-            console.log(`Best room: ${i + 1}`);
-            isFinished = false;
-            break;
-        }
+      let currentMonster = room[0];
+      let attackMonster = Number(room[1]);
+      health -= attackMonster;
+      if (health > 0) {
+        console.log(`You slayed ${currentMonster}.`);
+      } else {
+        console.log(`You died! Killed by ${currentMonster}.`);
+        console.log(`Best room: ${i + 1}`);
+        isFinished = false;
+        break;
+      }
     }
   }
-  if(isFinished){
-      console.log("You've made it!");
-      console.log(`Coins: ${coins}`);
-      console.log(`Health: ${health}`)
+  if (isFinished) {
+    console.log("You've made it!");
+    console.log(`Coins: ${coins}`);
+    console.log(`Health: ${health}`);
   }
 }
 
