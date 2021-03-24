@@ -5,11 +5,11 @@ function printCertificate(grade, names) {
   } else {
     printheader();
     console.log(fullName);
-    formatGrade(grade)
+    formatGrade(grade);
   }
 }
 
-printCertificate (3.50,["A.","B."])
+printCertificate(3.5, ["A.", "B."]);
 
 function printheader() {
   console.log(` ~~~-   {@}   -~~~`);
