@@ -4,4 +4,3 @@ function takeSmallestNumber(fNum, sNum, tNum) {
 }
 
 takeSmallestNumber(2, 5, 3);
-
