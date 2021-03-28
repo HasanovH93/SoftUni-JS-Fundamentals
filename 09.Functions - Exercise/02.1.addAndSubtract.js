@@ -1,20 +1,18 @@
 function printResult(fNum, sNum, tNum) {
-    
-    // console.log(fNum + sNum - tNum);  // One Line Solution
-    
-    function sumOfTwoNumbers(fNum, sNum){
-      return fNum + sNum;
-    }
-    function subtract(sum,tNum){
-        return sum - tNum;
-    }
+  // console.log(fNum + sNum - tNum);  // One Line Solution
 
-    let sum = sumOfTwoNumbers(fNum, sNum);
-   
-    let finalResult = subtract(sum,tNum);
+  function sumOfTwoNumbers(fNum, sNum) {
+    return fNum + sNum;
+  }
+  function subtract(sum, tNum) {
+    return sum - tNum;
+  }
 
-    console.log(finalResult);
+  let sum = sumOfTwoNumbers(fNum, sNum);
+
+  let finalResult = subtract(sum, tNum);
+
+  console.log(finalResult);
 }
 
-
-printResult(23,6,10)
+printResult(23, 6, 10);
