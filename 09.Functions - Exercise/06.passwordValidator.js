@@ -13,7 +13,6 @@ function passValidator(password) {
       ) {
         return false;
       }
-      
     }
     return true;
   }
@@ -28,7 +27,7 @@ function passValidator(password) {
     }
     return count >= 2 ? true : false;
   }
-  
+
   let isLengthValid = isLengthEnough(password);
   let isLettersAndDigitsOlny = isIncludeLettersAndDigits(password);
   let isTwoDigits = isHavingAtLeastTwoDigits(password);
