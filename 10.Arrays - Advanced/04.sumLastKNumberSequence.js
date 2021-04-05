@@ -1,18 +1,15 @@
-function sumLastNumbers(n,k){
+function sumLastNumbers(n, k) {
+  let newArr = [1];
 
-    let newArr = [1];
-
-    for(let i = 0; i< n-1; i++){
-        
-       let lastElement = newArr.slice(-k);
-       let sum = 0;
-       for(let element of lastElement){
-         sum += element;
-       }
-       newArr.push(sum);
+  for (let i = 0; i < n - 1; i++) {
+    let lastElement = newArr.slice(-k);
+    let sum = 0;
+    for (let element of lastElement) {
+      sum += element;
     }
-    console.log(newArr.join(' '));
-
+    newArr.push(sum);
+  }
+  console.log(newArr.join(" "));
 }
 
 sumLastNumbers(6, 3);
