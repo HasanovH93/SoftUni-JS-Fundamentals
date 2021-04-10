@@ -20,7 +20,7 @@ function houseParty(input) {
       }
     }
   }
-  console.log(list.join("/n"));
+  console.log(list.join("\n"));
 }
 houseParty([
   "Allie is going!",
