@@ -14,4 +14,4 @@ function solve(input) {
   }
 }
 
-solve('1');
+solve("1");
