@@ -1,14 +1,10 @@
-function personalInfo(firstName , lastName , age) {
-
-    person = {
-        firstName: firstName,
-        lastName:  lastName,
-        age: age
-    }
-    return person
+function personalInfo(firstName, lastName, age) {
+  person = {
+    firstName: firstName,
+    lastName: lastName,
+    age: age,
+  };
+  return person;
 }
 
-personalInfo("Peter", 
-"Pan",
-"20"
-)
+personalInfo("Peter", "Pan", "20");
