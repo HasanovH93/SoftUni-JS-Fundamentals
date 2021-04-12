@@ -5,7 +5,7 @@ function arrManipulator(arrOfNumbers, commands) {
 
     if (currentCommand === "add") {
       let index = Number(tokens[1]);
-      let element = Number(tokens[2]);
+      let element = Number(tokens[2]);z
       arrOfNumbers.splice(index, 0, element);
     } else if (currentCommand === "addMany") {
       let index = Number(tokens[1]);
