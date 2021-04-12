@@ -17,8 +17,8 @@ function inventoryOrdering(input) {
  
  for (const hero of heroes) {
    console.log(`Hero: ${hero.hero}`);
-   console.log(`Level => ${hero.level}`);
-   console.log(`Items => ${hero.items}`);
+   console.log(`level => ${hero.level}`);
+   console.log(`items => ${hero.items}`);
  }
 }
 
