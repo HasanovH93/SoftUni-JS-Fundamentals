@@ -3,10 +3,10 @@ function meetings(array) {
   for (const line of array) {
     let [day, name] = line.split(" ");
     if (result.hasOwnProperty(day)) {
-        console.log(`Conflict on ${day}!`)
+      console.log(`Conflict on ${day}!`);
     } else {
       result[day] = name;
-      console.log(`Scheduled for ${day}`)
+      console.log(`Scheduled for ${day}`);
     }
   }
 
