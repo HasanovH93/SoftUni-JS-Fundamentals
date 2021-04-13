@@ -10,7 +10,7 @@ function reception(arr){
 
     while(students > 0){
         hours++
-        if(hours % 4 === 0){
+        if(hours % 4 == 0){
             continue;
         }else {
           students -= employeeEficiency
