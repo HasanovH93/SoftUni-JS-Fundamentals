@@ -1,25 +1,17 @@
 function solve(input) {
+  let numbers = input.split(" ").map(Number);
+  const average = numbers.reduce((a, b) => a + b, 0) / numbers.length;
 
-    let numbers = input.split(" ").map(x => Number(x));
-    let sum = 0;
+  let sorted = numbers
+    .filter((x) => x > average)
+    .sort((a, b) => b - a)
+    .slice(0, 5);
 
-    for(let i = 0; i < numbers.length ; i++) {
-        sum += numbers[i];
-
-        
-
-    }
-    let avarage = sum / numbers.length;
-    let biggerNums = numbers.filter(x => x > avarage);
-    biggerNums = biggerNums.sort((a,b) => b - a);
-    biggerNums = biggerNums.slice(0,5)
-    if(biggerNums.length == 0){
-        console.log("No")
-    }else {
-        console.log(biggerNums.join(" "))
-    }
-   
-
+  if (sorted.length == 0) {
+    console.log("No");
+  } else {
+    console.log(sorted.join(" "));
+  }
 }
 
-solve('10 20 30 40 50')
+solve('1');
