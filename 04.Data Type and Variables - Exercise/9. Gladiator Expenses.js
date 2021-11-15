@@ -19,6 +19,6 @@ function solve(lostFights,helmetPrice,swordPrice,shieldPrice,armorPrice) {
          
 }
 
-console.log(`Gladiator expenses: ${price.toFixed(2)} aureus`);
+console.log(`Gladiator expenses: ${price.toFixed(2)} aureuss`);
 }
 solve(7,2,3,4,5)
