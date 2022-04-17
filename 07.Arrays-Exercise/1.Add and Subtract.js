@@ -4,7 +4,7 @@ function solve(input) {
   let fistArrSum = 0;
   let secondArrSum = 0;
   let arrLength = arrOfNumbers.length;
-
+  
   for (let i = 0; i < arrLength; i++) {
     let currentNumber = arrOfNumbers[i];
     
