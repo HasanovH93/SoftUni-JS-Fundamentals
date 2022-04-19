@@ -1,10 +1,21 @@
-function solve(firstArr, secondArr) {
-  let thirdArr = firstArr.map((firstEl, i) => 
-   i % 2 == 0 ? Number(firstEl) + Number(secondArr[i]) :  firstEl + secondArr[i]
-  );
+function solve(arr1,arr2) {
+
+  let newArr = [];
+
+  for(let i=0;i<arr1.length;i++){
+      let firstArrElement = arr1[i];
+      let secondArrElement = arr2[i];
+      if(i % 2 === 0){
+          newArr.push(Number(firstArrElement)+Number(secondArrElement));
+      }else {
+          newArr.push(`${firstArrElement}${secondArrElement}`);
+      }
+  }
+
+console.log(newArr.join(" - "));
   
- 
-  console.log(thirdArr.join(" - "));
+
+
 }
 
 
