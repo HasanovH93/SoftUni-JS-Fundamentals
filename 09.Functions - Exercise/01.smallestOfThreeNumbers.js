@@ -1,8 +1,8 @@
 function takeSmallestNumber(fNum,sNum,tNum) {
-
-    let smallestNumber =  Math.min(fNum,sNum,tNum)
-    console.log(smallestNumber)
+    
+    let smallestNumber = Math.min(fNum,sNum,tNum);
+    console.log(smallestNumber);
 
 }
 
-takeSmallestNumber(2,5,3)
+takeSmallestNumber(2,5,3);
