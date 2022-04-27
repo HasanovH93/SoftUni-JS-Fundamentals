@@ -11,8 +11,8 @@ function sumLastNumbers(n,k){
        }
        newArr.push(sum);
     }
-    console.log(newArr.join(' '))
+    console.log(newArr.join(' '));
 
 }
 
-sumLastNumbers(6, 3)
+sumLastNumbers(6, 3);
