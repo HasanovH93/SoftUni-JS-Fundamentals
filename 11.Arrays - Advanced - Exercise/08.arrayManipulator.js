@@ -29,22 +29,17 @@ function arrManipulator(arrOfNumbers, commands) {
       if (arrOfNumbers.length % 2 !== 0) {
         arrOfNumbers.push(0);
       }
-      for (let i = 0; i < arrOfNumbers.length - 1; i+2) {
+      for (let i = 0; i < arrOfNumbers.length - 1; i + 2) {
         let firstNum = arrOfNumbers.shift();
         let secondNumber = arrOfNumbers.shift();
-        let sum = firstNum + secondNumber
+        let sum = firstNum + secondNumber;
         resultArr.push(sum);
       }
-     arrOfNumbers = resultArr
+      arrOfNumbers = resultArr;
     } else if (currentCommand === "print") {
       console.log(`[ ${arrOfNumbers.join(", ")} ]`);
     }
   }
 }
 
-arrManipulator(
-    [2, 2, 4, 2, 4],
-    ["add 1 4", "sumPairs", "print"]
-    
-    
-);
+arrManipulator([2, 2, 4, 2, 4], ["add 1 4", "sumPairs", "print"]);
