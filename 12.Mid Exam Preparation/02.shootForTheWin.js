@@ -1,6 +1,6 @@
 function solve(input) {
   let targets = input.shift().split(" ").map(Number);
-  input.pop();
+   input.pop();
   let shots = input.map(Number);
   let shotCounter = 0;
 
