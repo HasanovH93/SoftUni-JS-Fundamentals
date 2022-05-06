@@ -1,6 +1,6 @@
-function parsingJSON (text){
+function parsingJSON (objAsString){
 
-    let obj = JSON.parse(text)
+    let obj = JSON.parse(objAsString)
     let objEntries = Object.entries(obj)
     
     for(let [key,value] of objEntries ){
