@@ -1,6 +1,7 @@
 function letterChange(input){
-   
+    // let regexp = /\s+/g;
     let words = input.split(" ").filter((element) => element !== "");
+  
     let totalSum = 0;
 
    const isUppercase = (letter) => letter.toUpperCase() === letter;
