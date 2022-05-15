@@ -1,5 +1,5 @@
 function matchDate(input){
-    let regEx = /\b(?<day>\d{2})([\.\/\-])(?<month>[A-Z][a-z]{2})\2(?<year>\d{4})\b/gm;
+    let regEx = /\b(?<day>\d{2})(?<del>[\.\/\-])(?<month>[A-Z][a-z]{2})\k<del>(?<year>\d{4})\b/gm;
     
     
     let validMatch 
