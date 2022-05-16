@@ -1,6 +1,6 @@
 function revealWords(words, string) {
 
-
+ 
     words = words.split(", ");
     for (const word of words) {
         
@@ -8,7 +8,9 @@ function revealWords(words, string) {
        
     }
     console.log(string)
-}
+
+  }  
+
 revealWords(
   "great",
   "softuni is ***** place for learning new programming languages"
