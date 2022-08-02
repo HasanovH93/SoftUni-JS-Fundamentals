@@ -1,6 +1,5 @@
 function solve(fNum, oper, sNum) {
   let firstNumber = fNum;
-  let operator = oper;
   let secondNumber = sNum;
   let result = 0;
 

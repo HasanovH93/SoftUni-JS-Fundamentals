@@ -29,8 +29,7 @@ function solve(input) {
               list.splice(index, 1);
               list.push(element1);
           } break;
-          default:
-          break;
+          
       }
   tokens = input.shift().split(" - ");
     }
