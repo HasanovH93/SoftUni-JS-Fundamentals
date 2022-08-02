@@ -9,7 +9,7 @@ function solve(arr) {
     switch (action) {
       case "Add Stop":
         startIndex = Number(firstParam);
-        if (startIndex < 0 || startIndex >= initialString.length) {
+        if (startIndex < 0 || endIndex >= initialString.length) {
           break;
         }
         let value = secondParam;
@@ -25,6 +25,7 @@ function solve(arr) {
         endIndex = Number(secondParam);
 
         if (!initialString[startIndex] || !initialString[endIndex]) {
+            console.log(initialString)
           break;
         }
 
