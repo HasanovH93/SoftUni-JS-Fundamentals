@@ -1,5 +1,44 @@
 function solve(arr) {
-    
+  let initialString = arr.shift();
+  let line = arr.shift();
+  let startIndex;
+  let endIndex;
+  while (line !== "Travel") {
+    let [action, firstParam, secondParam] = line.split(":");
+
+    switch (action) {
+      case "Add Stop":
+        startIndex = Number(firstParam);
+        if (startIndex < 0 || startIndex >= initialString.length) {
+          break;
+        }
+        let value = secondParam;
+        let firstPart = initialString.slice(0, startIndex);
+        let secondPart = initialString.slice(startIndex);
+
+        initialString = firstPart + value + secondPart;
+        console.log(initialString);
+
+        break;
+      case "Remove Stop":
+        startIndex = Number(firstParam);
+        endIndex = Number(secondParam);
+
+        if (!initialString[startIndex] || !initialString[endIndex]) {
+          break;
+        }
+
+        let substr = initialString.substring(startIndex, endIndex + 1);
+        initialString = initialString.replace(substr, "");
+        console.log(initialString);
+
+        break;
+      case "Switch":
+        break;
+    }
+
+    line = arr.shift();
+  }
 }
 
 solve([
