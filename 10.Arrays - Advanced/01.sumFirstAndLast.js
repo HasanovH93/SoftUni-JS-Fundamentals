@@ -8,3 +8,14 @@ function sumNumbers(arr) {
 }
 
 sumNumbers([20, 30, 40]);
+
+
+// function as(input) {
+
+//   let first = Number(input[0]);
+//   let last = Number(input[input.length-1]);
+
+//   console.log(first+last);
+
+// }
+
