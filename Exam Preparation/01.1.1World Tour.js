@@ -34,11 +34,19 @@ function solve(arr) {
 
         break;
       case "Switch":
+        let oldValue = firstParam;
+        let newValue = secondParam;
+        let pattern = new RegExp(oldValue,'g')
+        initialString =  initialString.replace(pattern,newValue)
+        console.log(initialString)
+
+
         break;
     }
 
     line = arr.shift();
   }
+  console.log(`Ready for world tour! Planned stops: ${initialString}`)
 }
 
 solve([
