@@ -18,7 +18,7 @@ function solve(arr) {
       let tokens = element.split(" : ");
       if (element.includes("Refuel")) {
         let givenCar = tokens[1];
-        let givenFuel = tokens[2];
+        let givenFuel = Number(tokens[2]);
         let sum = givenFuel + result.get(givenCar)[1];
 
         if (sum > 75) {
