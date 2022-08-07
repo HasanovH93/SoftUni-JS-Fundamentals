@@ -24,21 +24,20 @@ function passReset(arr) {
       return password;
     },
   };
-  
-  arr.forEach(line => {
-    if(line !== "Done"){
-       let [command, ...tokens] = line.split(' ');
-       let oldPassword = password;
 
-       password = commandParser[command](password, ...tokens);
+  arr.forEach((line) => {
+    if (line !== "Done") {
+      let [command, ...tokens] = line.split(" ");
+      let oldPassword = password;
 
-       if(oldPassword !== password){
-        console.log(password)
-       }
+      password = commandParser[command](password, ...tokens);
+
+      if (oldPassword !== password) {
+        console.log(password);
+      }
     }
-    
   });
-  console.log(`Your password is: ${password}`)
+  console.log(`Your password is: ${password}`);
 }
 passReset([
   "Siiceercaroetavm!:?:ahsott.:i:nstupmomceqr",
