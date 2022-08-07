@@ -23,42 +23,45 @@ function solve(arr) {
     let hero = heroes[name];
 
     if (command == "CastSpell") {
-      if (hero.mp >= p1) {
-        hero.mp -= p1;
-        console.log(
-          `${name} has successfully cast ${p2} and now has ${hero.mp} MP!`
-        );
-      } else {
-        console.log(`${name} does not have enough MP to cast ${p2}!`);
-      }
+      CastSpell(hero, p1, name, p2);
     } else if (command == "TakeDamage") {
-        hero.hp -= p1;
+      hero.hp -= p1;
       if (hero.hp > 0) {
         console.log(
-            `${name} was hit for ${p1} HP by ${p2} and now has ${hero.hp} HP left!`);
-        } else {
-          delete heroes[name];
-          console.log(`${name} has been killed by ${p2}!"`);
-        }
-      } else if (command == "Recharge") {
-      let mp =   Math.min((200 - hero.mp),p1)
-      hero.mp += mp
-      console.log(`${name} recharged for ${mp} MP!`)
-     
+          `${name} was hit for ${p1} HP by ${p2} and now has ${hero.hp} HP left!`
+        );
+      } else {
+        delete heroes[name];
+        console.log(`${name} has been killed by ${p2}!`);
+      }
+    } else if (command == "Recharge") {
+      let mp = Math.min(200 - hero.mp, p1);
+      hero.mp += mp;
+      console.log(`${name} recharged for ${mp} MP!`);
     } else if (command == "Heal") {
-        let hp =   Math.min((100 - hero.hp),p1)
-        hero.hp += hp
-        console.log(`${name} healed for ${hp} HP!`)
+      let hp = Math.min(100 - hero.hp, p1);
+      hero.hp += hp;
+      console.log(`${name} healed for ${hp} HP!`);
     }
   }
 
-  for(let heroData of Object.entries(heroes)){
+  for (let heroData of Object.entries(heroes)) {
     let name = heroData[0];
     let hero = heroData[1];
-    console.log(name)
-    console.log(`  HP: ${hero.hp}`)
-    console.log(`  MP: ${hero.mp}`)
+    console.log(name);
+    console.log(`  HP: ${hero.hp}`);
+    console.log(`  MP: ${hero.mp}`);
   }
+  function CastSpell(hero, p1, name, p2) {
+    if (hero.mp >= p1) {
+        hero.mp -= p1;
+        console.log(
+            `${name} has successfully cast ${p2} and now has ${hero.mp} MP!`
+        );
+    } else {
+        console.log(`${name} does not have enough MP to cast ${p2}!`);
+    }
+}
 }
 solve([
   "2",
@@ -84,3 +87,5 @@ solve([
   "TakeDamage - Ivor - 3 - Mosquito",
   "End",
 ]);
+
+
