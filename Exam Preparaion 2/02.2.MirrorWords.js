@@ -29,7 +29,7 @@ function mirrorWords(input) {
         console.log(`No mirror words!`)
     }else {
         console.log("The mirror words are:")
-        console.log(result.join(" ,"))
+        console.log(result.join(", "))
     }
   
 }
