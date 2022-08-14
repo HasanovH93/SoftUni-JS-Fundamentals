@@ -5,8 +5,8 @@ function followers(input) {
        let [command, ...rest] = el.split(": ");
         if (command === "Log out") {
         return;
-});
-      
+}});
+     
       switch (command) {
         case "New follower":
           !obj[rest[0]] ? obj[rest[0]] = { likes: 0 } : ''
@@ -27,12 +27,13 @@ function followers(input) {
           let blocked = rest[0];
           obj[blocked] ? delete obj[blocked] : console.log(`${blocked} doesn't exist.`);
       }
-    });
+    
     console.log(`${Object.entries(obj).length} followers`);
     for (const info of Object.entries(obj)) {
       console.log(`${info[0]}: ${obj[info[0]].likes}`);
     }
   }
+
   followers([
     "Like: Katy: 3",
     "Comment: Katy",
