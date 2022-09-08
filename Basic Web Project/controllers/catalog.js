@@ -1,30 +1,33 @@
-const data = {
-    '00001': 'Oil filter',
-    '00002':  'Windshield wiper',
-    '00003':  'Xenon',
-    '0004': 'Tires',
-
-}
-
+const data = [
+  {
+    id: "00001",
+    name: "Oil filter",
+  },
+  {
+    id: "00002",
+    name: "Windshield wiper",
+  },
+  {
+    id: "00003",
+    name: "Xenon",
+  },
+  {
+    id: "0004",
+    name: "Tires",
+  },
+];
 
 module.exports = {
-   catalog: (req,res) => {
-        res.send(`<h1>Catalog</h1>
-        <a href="/">Home</a>
-        <p>List Of Products</p>
-        <ul>
-        ${Object.entries(data).map(e => `<li><a href="/catalog/${e[0]}">${e[1]}</li>`).join("")}
-        <ul>`)
-    },
-    details:(req,res) => {
+  catalog: (req, res) => {
+    res.render(`catalog`,{products:data});
+  },
+  details: (req, res) => {
+    console.log(req.params.productId);
 
-        console.log(req.params.productId)
-    
-        let product = data[req.params.productId]
-        res.send(`<h1>Product Details</h1>
+    let product = data[req.params.productId];
+    res.send(`<h1>Product Details</h1>
         <a href="/catalog">Back to Catalog</a>
         <p>Info about Product ${product}</p>
-        <p>${product}</p>`)
-        
-    }
-}
+        <p>${product}</p>`);
+  },
+};
