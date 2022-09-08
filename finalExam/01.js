@@ -15,21 +15,16 @@ function solve(arr) {
         delivers[tokens[1]] += Number(tokens[2]);
       }
     } else if (command === "Return") {
-
-        if(Number[tokens[2]] > Object.values(delivers)){
-           return;
-        }else {
-            if (delivers.hasOwnProperty(tokens[1])) {
-        
-                delivers[tokens[1]] -= Number(tokens[2]);
-                if([tokens[2]] <= 0){
-                    delete Object.delivers[tokens[2]]
-        
-                }
-              }
+      if (Number[tokens[2]] > Object.values(delivers)) {
+        return;
+      } else {
+        if (delivers.hasOwnProperty(tokens[1])) {
+          delivers[tokens[1]] -= Number(tokens[2]);
+          if ([tokens[2]] === 0) {
+            delete delivers[tokens[2]]
+          }
         }
-        
-     
+      }
     } else if (command == "Sell") {
       if (!sellers.hasOwnProperty(tokens[1])) {
         sellers[tokens[1]] = Number(tokens[2]);
@@ -42,23 +37,20 @@ function solve(arr) {
     console.log(`${key}: ${value.toFixed(2)}`);
   }
   console.log("-----------");
-  
-  
-    for (let [key, value] of Object.entries(delivers)) {
-       
-            console.log(`${key}: ${value.toFixed(2)}`);
-        
-       
-      
+
+  for (let [key, value] of Object.entries(delivers)) {
+    console.log(`${key}: ${value.toFixed(2)}`);
   }
- 
+
   console.log("-----------");
-  
+
   function sum(obj) {
-    return Object.keys(obj).reduce((sum,key)=>sum+parseFloat(obj[key]||0),0);
+    return Object.keys(obj).reduce(
+      (sum, key) => sum + parseFloat(obj[key] || 0),
+      0
+    );
   }
- 
-  
+
   console.log(`Total Income: ${sum(sellers).toFixed(2)}`);
 }
 solve([
