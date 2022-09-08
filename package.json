@@ -1,0 +1,22 @@
+{
+  "name": "softuni-fundamentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "15.bitwiseOperations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HasanovH93/SoftUni-Fundamentals.git"
+  },
+  "author": "HH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HasanovH93/SoftUni-Fundamentals/issues"
+  },
+  "homepage": "https://github.com/HasanovH93/SoftUni-Fundamentals#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
