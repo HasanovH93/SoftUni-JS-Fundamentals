@@ -1,6 +1,13 @@
 let express = require('express');
 
 let app = express()
+const data = {
+    '00001': 'Oil filter',
+    '00002':  'Windshield wiper',
+    '00003':  'Xenon',
+    '0004': 'Tires',
+
+}
 
 app.get('/', (req,res) => {
     res.send(`<h1>Home Page</h1>
@@ -13,15 +20,19 @@ app.get('/catalog', (req,res) => {
     <a href="/">Home</a>
     <p>List Of Products</p>
     <ul>
-    <li><a href="/catalog/0001">Product1</li>
-    <li><a href="/catalog/0002">Product2</li>
+    ${Object.entries(data).map(e => `<li><a href="/catalog/${e[0]}">${e[1]}</li>`).join("")}
     <ul>`)
-})
+});
 
 app.get('/catalog/:productId', (req,res) => {
+
+    console.log(req.params.productId)
+
+    let product = data[req.params.productId]
     res.send(`<h1>Product Details</h1>
     <a href="/catalog">Back to Catalog</a>
-    <p>Info about Product 1</p>`)
+    <p>Info about Product ${product}</p>
+    <p>${product}</p>`)
     
 })
 
