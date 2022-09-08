@@ -1,42 +1,26 @@
-let express = require('express');
+let express = require("express");
+let handlebars = require("express-handlebars").create;
+const { details } = require("./controllers/catalog");
+const catalog = require("./controllers/catalog");
+let catalogController = require("./controllers/catalog");
 
-let app = express()
-const data = {
-    '00001': 'Oil filter',
-    '00002':  'Windshield wiper',
-    '00003':  'Xenon',
-    '0004': 'Tires',
+let app = express();
 
-}
+app.engine(
+  ".hbs",
+  handlebars({
+    extname: '.hbs',
+  }).engine
+);
 
-app.get('/', (req,res) => {
-    res.send(`<h1>Home Page</h1>
-    <a href="/catalog">Catalog</a>
-    <p>Welcome to our site!</p>`)
-} )
+app.set('view engine', '.hbs')
 
-app.get('/catalog', (req,res) => {
-    res.send(`<h1>Catalog</h1>
-    <a href="/">Home</a>
-    <p>List Of Products</p>
-    <ul>
-    ${Object.entries(data).map(e => `<li><a href="/catalog/${e[0]}">${e[1]}</li>`).join("")}
-    <ul>`)
+app.get("/", (req, res) => {
+  res.render('home')
 });
 
-app.get('/catalog/:productId', (req,res) => {
+app.get("/catalog", catalog.catalog);
 
-    console.log(req.params.productId)
+app.get("/catalog/:productId", catalog.details);
 
-    let product = data[req.params.productId]
-    res.send(`<h1>Product Details</h1>
-    <a href="/catalog">Back to Catalog</a>
-    <p>Info about Product ${product}</p>
-    <p>${product}</p>`)
-    
-})
-
-
-app.listen(3000)
-
-
+app.listen(3000, () => console.log("Server listening on port 3000"));
