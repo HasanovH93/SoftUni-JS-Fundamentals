@@ -10,7 +10,8 @@ let phonebook = [
 function getData(){
 	return phonebook;
 }
-function saveContact(){
+function saveContact(name,number){
+	let contact = new Contact(name,number)
 	phonebook.push(contact)
 }
 

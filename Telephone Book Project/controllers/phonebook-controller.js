@@ -7,6 +7,8 @@ module.exports = {
     // TODO: load index page
   },
   addPhonebookPost:(req, res) => {
-    // TODO: add a phonebook object to the array
+    console.log(req.body)
+    phonebook.saveContact(req.body.name,req.body.number)
+    res.redirect('/')
   }
 }
