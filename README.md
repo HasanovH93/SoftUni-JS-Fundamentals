@@ -142,4 +142,4 @@
 • MVC;<br>
 • MVC with Node, Express.js, Handlebars.<br>
 
-https://softuni.bg/certificates/certificates/converttoimage/141457?code=547d7c2e
+![Screenshot](fundamentals-certificate.jpg)
